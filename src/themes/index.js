@@ -1,6 +1,6 @@
 const GOFILE_API_BASE = "https://api.gofile.io/contents/";
 const AUTH_TOKEN = "Bearer THEGOFILETOKEN"; // Replace with your API Key
-const THEROOTFOLDERID = "THEROOTFOLDERID"; // Replace your custom or root folder ID here
+const ROOT_FOLDER_ID = "THEROOTFOLDERID"; // Replace your custom or root folder ID here
 
 async function fetchFileList(folderId) {
     const response = await fetch(`${GOFILE_API_BASE}${folderId}?wt=4fd6sg89d7s6&contentFilter=&page=1&pageSize=1000&sortField=createTime&sortDirection=-1`, {
