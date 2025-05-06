@@ -6,21 +6,35 @@ A Cloudflare Worker-based indexer for [gofile.io](https://gofile.io) that improv
 
 ---
 
-## 🚀 Features
-- Index & browse your GoFile.io files/folders via a web interface
-- Customizable themes (Lite, Dark, Simple)
-- Direct integration with GoFile.io API using your account token
-- Free unlimited storage (via GoFile.io)
+## 🚨 Important Notice About Code Generator
+**❗ We show ads on the code generator website** to support maintenance costs, but:  
+- 🔒 **Generated code contains NO ADS/TRACKING**  
+- 🌐 **Your files/token never pass through our servers**  
+- 🔑 Authentication handled directly between Cloudflare Worker ↔ GoFile.io  
+- 🛡️ Zero third-party access to your data (including developers)
+
+---
+
+## 🚀 Key Features
+- **⚡ Blazing Fast Downloads** - Leverages Cloudflare's global CDN
+- **⏯️ Extreme Resume/Pause Support** - Permanent links for interrupted downloads
+- **🧵 Multi-Threading Ready** - Accelerated parallel file transfers
+- 🌓 **Multiple UI Themes** - Lite/Dark/Simple modes (more coming)
+- 🔄 **DNS Restriction Bypass** - Universal access through Cloudflare proxy
+- 📂 **Real-Time Indexing** - Instant reflection of GoFile.io changes
+- 🔍 **Search-Friendly** - Clean URLs for easy navigation
+- 📱 **Mobile-Optimized** - Responsive on all devices
 
 ---
 
 ## ⚠️ Important Notes
-- **Not affiliated with GoFile.io** - This is a community-built solution
-- **Personal use recommended** - Avoid storing sensitive/copyrighted content
-- **No uptime guarantees** - Depends on Cloudflare Workers and GoFile.io availability
-- **Token security** - Your GoFile.io token is only stored locally in your Worker
+- **Complete Data Isolation** - We never see your token/files
+- **Personal Use Recommended** - Avoid sensitive/copyrighted content
+- **Token Storage** - Only exists in your Cloudflare Worker environment
+- **No Guarantees** - Subject to Cloudflare/GoFile.io availability
 
 ---
+
 
 ## 🛠️ Deployment Steps
 
@@ -59,6 +73,17 @@ A Cloudflare Worker-based indexer for [gofile.io](https://gofile.io) that improv
 - Monitor your Cloudflare Worker usage
 
 ---
+
+## 🔒 Security Architecture
+```mermaid
+graph LR
+    User[Your Browser] -->|HTTPS| Cloudflare[Cloudflare Worker]
+    Cloudflare -->|API Calls| GoFile[GoFile.io]
+    GoFile -->|Responses| Cloudflare
+    Cloudflare -->|Encrypted Data| User
+    Developer[Code Creator] -.->|No Data Flow| Cloudflare
+```
+
 
 ## 📜 License
 MIT License - See [LICENSE](LICENSE) for details
