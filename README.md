@@ -89,3 +89,16 @@ graph LR
 MIT License - See [LICENSE](LICENSE) for details
 
 **Use responsibly** - Contributors not liable for misuse
+
+
+## 🙏 Acknowledgements
+If you find this project useful and choose to reuse/modify it:  
+**Please consider giving credit** by mentioning:  
+`Created using [developeranaz/gofile-worker](https://github.com/developeranaz/gofile-worker)`  
+
+Your attribution helps:
+- 🌱 Encourage further development
+- 🔍 Help others discover the original project
+- 🤝 Build a supportive open-source community
+
+*(Not mandatory, but deeply appreciated!)*
