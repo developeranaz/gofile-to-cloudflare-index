@@ -84,7 +84,10 @@ graph LR
     Cloudflare -->|Encrypted Data| User
     Developer[Code Creator] -.->|No Data Flow| Cloudflare
 ```
+## Screenshots
 ![Screenshot](./.images/Screenshot%202025-05-06%20220100.png)
+![Screenshot](./.images/Screenshot%202025-05-06%20221415.png)
+![Screenshot](./.images/Screenshot%202025-05-06%20221246.png)
 
 ## 📜 License
 MIT License - See [LICENSE](LICENSE) for details
