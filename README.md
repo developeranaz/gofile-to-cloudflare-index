@@ -2,8 +2,13 @@
 
 A Cloudflare Worker-based indexer for [gofile.io](https://gofile.io) that improves download speed, enhances stability, and offers unlimited access to private free account files. Automatically fetches and serves gofile links through fast, reliable, permanent links with extreme pause-resume support and multithreaded downloads.
 
-CLICK THE BUTTON BELOW TO GENERATE YOUR CLOUDFLARE WORKER CODE AND DEPLOY (SEE INSTRUCTIONS)
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://developeranaz.github.io/webapps/gofile.io/)
+** CLICK THE BUTTON BELOW TO GENERATE YOUR CLOUDFLARE WORKER CODE AND DEPLOY (SEE INSTRUCTIONS) **
+
+<div align="center">
+    <a href="https://developeranaz.github.io/webapps/gofile.io/">
+        <img src="https://deploy.workers.cloudflare.com/button" alt="Deploy to Cloudflare">
+    </a>
+</div>
 
 **Unofficial GoFile.io File Indexer** built for Cloudflare Workers.  
 ⚠️ **Disclaimer**: This is **not** an official GoFile.io product. Use at your own risk.
