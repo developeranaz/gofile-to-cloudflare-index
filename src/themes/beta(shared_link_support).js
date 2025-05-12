@@ -86,7 +86,7 @@ async function handleRequest(event) {
     <div class="shared-section">
         <button class="shared-button" onclick="toggleSharedInput()">Shared/Public</button>
         <div id="sharedInput">
-            <input type="text" id="folderInput" placeholder="Enter URL or Folder ID (e.g. A4CCPt)">
+            <input type="text" id="folderInput" placeholder="Enter URL or Folder ID (e.g. A0LCPx)">
             <button onclick="openSharedFolder()">View/Index</button>
         </div>
     </div>
