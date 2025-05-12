@@ -68,7 +68,7 @@ async function handleRequest(event) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>File Index</title>
+    <title>GoFile Index</title>
     <style>
         body { font-family: Arial, sans-serif; padding: 20px; }
         input { width: 100%; padding: 10px; margin-bottom: 10px; font-size: 16px; }
@@ -82,7 +82,7 @@ async function handleRequest(event) {
     </style>
 </head>
 <body>
-    <h2>File Index</h2>
+    <h2>GoFile Index</h2>
     <div class="shared-section">
         <button class="shared-button" onclick="toggleSharedInput()">Shared/Public</button>
         <div id="sharedInput">
