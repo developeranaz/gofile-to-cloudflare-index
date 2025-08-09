@@ -1,0 +1,2 @@
+# Notice
+Bro, the prototype is ready, but I'm still in the testing phase and it may not be released unless there’s more interest. Since there aren't many users for this type of project, I've only set it up on my Fire TV for now. Right now, it has no logos, no name, and is basically just a skeleton app. If more people show interest in it, I’ll think about releasing it. Otherwise, I just need to fix a few minor bugs. Thanks for showing interest! 🙃
