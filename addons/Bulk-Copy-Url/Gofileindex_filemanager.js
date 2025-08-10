@@ -377,6 +377,11 @@ function getHTMLInterface() {
             border-radius: 8px;
             margin-bottom: 15px;
             background: rgba(102, 126, 234, 0.05);
+            position: relative;
+        }
+        
+        .file-content {
+            margin-right: 80px;
         }
         
         .file-name {
@@ -396,6 +401,38 @@ function getHTMLInterface() {
             font-size: 12px;
             color: #888;
             word-break: break-all;
+        }
+        
+        .copy-single-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 8px 12px;
+            background: linear-gradient(135deg, #ff7b7b, #ff9a56);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            min-width: 60px;
+        }
+        
+        .copy-single-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(255, 123, 123, 0.4);
+        }
+        
+        .copy-single-btn:active {
+            transform: translateY(0px);
+        }
+        
+        .copy-single-btn.copied {
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+            pointer-events: none;
         }
         
         .copy-format {
@@ -676,11 +713,14 @@ function getHTMLInterface() {
                 return;
             }
             
-            elements.fileList.innerHTML = fetchedFiles.map(file =>
+            elements.fileList.innerHTML = fetchedFiles.map((file, index) =>
                 \`<div class="file-item">
-                    <div class="file-name">🎥 \${file.fileName}</div>
-                    <div class="file-size">📊 Size: \${file.fileSize}</div>
-                    <div class="file-url">🔗 \${file.downloadUrl}</div>
+                    <button class="copy-single-btn" onclick="copySingleFile(\${index})">Copy</button>
+                    <div class="file-content">
+                        <div class="file-name">🎥 \${file.fileName}</div>
+                        <div class="file-size">📊 Size: \${file.fileSize}</div>
+                        <div class="file-url">🔗 \${file.downloadUrl}</div>
+                    </div>
                 </div>\`
             ).join('');
             
@@ -690,6 +730,31 @@ function getHTMLInterface() {
             
             elements.copyFormat.textContent = copyText;
             elements.fileResults.style.display = 'block';
+        }
+        
+        async function copySingleFile(index) {
+            try {
+                const file = fetchedFiles[index];
+                const copyText = \`\${file.fileName} | \${file.fileSize} | \${file.downloadUrl}\`;
+                
+                await navigator.clipboard.writeText(copyText);
+                
+                // Update button to show success
+                const button = document.querySelectorAll('.copy-single-btn')[index];
+                const originalText = button.textContent;
+                button.textContent = '✓ Copied!';
+                button.classList.add('copied');
+                
+                // Reset button after 2 seconds
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+                
+            } catch (error) {
+                showStatus('❌ Failed to copy file details', 'error');
+                setTimeout(hideStatus, 2000);
+            }
         }
         
         async function copyToClipboard() {
