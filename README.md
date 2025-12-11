@@ -1,4 +1,3 @@
-# [11-12-2025] Something has changed with gofile.io, I think. I am looking for a fix. Please be patient and don't blame me. 😿
 # GoFile.io File Indexer (Cloudflare Worker)
 
 A Cloudflare Worker-based indexer for [gofile.io](https://gofile.io) that improves download speed, enhances stability, and offers unlimited access to private free account files. Automatically fetches and serves gofile links through fast, reliable, permanent links with extreme pause-resume support and multithreaded downloads.
@@ -37,8 +36,8 @@ A Cloudflare Worker-based indexer for [gofile.io](https://gofile.io) that improv
 
 ---
 
-## New beta features: 
-- **added private/shared folder indexing and download option.** - use beta theme
+## New  features: 
+- **added private/shared folder indexing and download option.** - use beta/ light theme
 
 
 ## ⚠️ Important Notes
