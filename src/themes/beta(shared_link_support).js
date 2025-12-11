@@ -5,7 +5,9 @@ const ROOT_FOLDER_ID = "THEROOTFOLDERID"; // Replace your custom or root folder 
 
 async function fetchFileList(folderId) {
     const response = await fetch(`${GOFILE_API_BASE}${folderId}?wt=4fd6sg89d7s6&contentFilter=&page=1&pageSize=1000&sortField=createTime&sortDirection=-1`, {
-        headers: { "authorization": AUTH_TOKEN }
+        headers: { "authorization": AUTH_TOKEN ,
+                   "x-website-token": "4fd6sg89d7s6" // If this line is not included, it will make this shit mad.
+                 }
     });
     return response.json();
 }
