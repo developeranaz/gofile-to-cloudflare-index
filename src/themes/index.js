@@ -1,4 +1,3 @@
-// THIS IS A BETA VERSION OF CODE AND MAY CONTAIN ERROR IN NEW FEATURES
 const GOFILE_API_BASE = "https://api.gofile.io/contents/";
 const AUTH_TOKEN = "Bearer THEGOFILETOKEN"; // Replace with your API Key
 const ROOT_FOLDER_ID = "THEROOTFOLDERID"; // Replace your custom or root folder ID here
