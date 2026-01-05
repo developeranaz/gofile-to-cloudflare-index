@@ -2,6 +2,18 @@
 
 A Cloudflare Worker-based indexer for [gofile.io](https://gofile.io) that improves download speed, enhances stability, and offers unlimited access to private free account files. Automatically fetches and serves gofile links through fast, reliable, permanent links with extreme pause-resume support and multithreaded downloads.
 
+<span style="color:#ff0000">
+
+**⚠️ Update:** Cloudflare is now returning an error, **"Error 1101,"** for some users.  
+Already-deployed apps may still work, but new deployments or edits during deployment may show the same error.  
+
+This happens because Cloudflare is blocking requests or deployments are stuck.  
+If this occurs, delete the app completely and create a new one.  
+
+The error may repeat. I tried to fix this, but somehow Cloudflare is detecting it — only preview works.
+
+</span>
+
 ** CLICK THE BUTTON BELOW TO GENERATE YOUR CLOUDFLARE WORKER CODE AND DEPLOY (SEE INSTRUCTIONS) **
 
 <div align="center">
