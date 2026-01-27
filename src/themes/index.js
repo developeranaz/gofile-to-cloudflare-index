@@ -202,7 +202,7 @@ async function handleRequest(event) {
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Sundarans Private Files - Login</title>
+    <title>GoFile Index - Login</title>
     <link rel="icon" href="https://raw.githubusercontent.com/developeranaz/gofile-to-cloudflare-index/refs/heads/main/.images/1747059739966.png" type="image/png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -272,7 +272,7 @@ async function handleRequest(event) {
 </head>
 <body>
     <div class="container">
-        <h2>Sundarans Private Files - Login</h2>
+        <h2>GoFile Index - Login</h2>
         <p class="error" id="error">Invalid username or password</p>
         <input type="text" id="username" placeholder="Username">
         <input type="password" id="password" placeholder="Password">
@@ -328,7 +328,7 @@ async function handleRequest(event) {
             `, {
                 status: 401,
                 headers: {
-                    "WWW-Authenticate": 'Basic realm="Sundarans Private Files"',
+                    "WWW-Authenticate": 'Basic realm="GoFile Index"',
                     "Content-Type": "text/html"
                 }
             });
@@ -345,7 +345,7 @@ async function handleRequest(event) {
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Sundarans Private Files - Error</title>
+    <title>GoFile Index - Error</title>
     <link rel="icon" href="https://raw.githubusercontent.com/developeranaz/gofile-to-cloudflare-index/refs/heads/main/.images/1747059739966.png" type="image/png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -429,7 +429,7 @@ async function handleRequest(event) {
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Sundarans Private Files - ${folderId}</title>
+    <title>GoFile Index - ${folderId}</title>
     <link rel="icon" href="https://raw.githubusercontent.com/developeranaz/gofile-to-cloudflare-index/refs/heads/main/.images/1747059739966.png" type="image/png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -618,7 +618,7 @@ async function handleRequest(event) {
 </head>
 <body>
     <div class="container">
-        <h2>Sundarans Private Files</h2>
+        <h2>GoFile Index</h2>
         
         <div class="stats-bar">
             <div class="stat-item">
@@ -903,7 +903,7 @@ async function handleRequest(event) {
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Sundarans Private Files - Login</title>
+    <title>GoFile Index - Login</title>
     <link rel="icon" href="https://raw.githubusercontent.com/developeranaz/gofile-to-cloudflare-index/refs/heads/main/.images/1747059739966.png" type="image/png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -973,7 +973,7 @@ async function handleRequest(event) {
 </head>
 <body>
     <div class="container">
-        <h2>Sundarans Private Files - Login</h2>
+        <h2>GoFile Index - Login</h2>
         <p class="error" id="error">Invalid username or password</p>
         <input type="text" id="username" placeholder="Username">
         <input type="password" id="password" placeholder="Password">
@@ -1029,7 +1029,7 @@ async function handleRequest(event) {
             `, {
                 status: 401,
                 headers: {
-                    "WWW-Authenticate": 'Basic realm="Sundarans Private Files"',
+                    "WWW-Authenticate": 'Basic realm="GoFile Index"',
                     "Content-Type": "text/html"
                 }
             });
@@ -1046,7 +1046,7 @@ async function handleRequest(event) {
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Sundarans Private Files - Error</title>
+    <title>GoFile Index - Error</title>
     <link rel="icon" href="https://raw.githubusercontent.com/developeranaz/gofile-to-cloudflare-index/refs/heads/main/.images/1747059739966.png" type="image/png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -1130,7 +1130,7 @@ async function handleRequest(event) {
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Sundarans Private Files - ${folderId}</title>
+    <title>GoFile Index - ${folderId}</title>
     <link rel="icon" href="https://raw.githubusercontent.com/developeranaz/gofile-to-cloudflare-index/refs/heads/main/.images/1747059739966.png" type="image/png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -1319,7 +1319,7 @@ async function handleRequest(event) {
 </head>
 <body>
     <div class="container">
-        <h2>Sundarans Private Files</h2>
+        <h2>GoFile Index</h2>
         
         <div class="stats-bar">
             <div class="stat-item">
