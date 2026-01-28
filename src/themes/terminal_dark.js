@@ -201,7 +201,7 @@ async function handleRequest(event) {
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Sundarans Private Files - Login</title>
+    <title>GoFile Index - Login</title>
     <link rel="icon" href="https://raw.githubusercontent.com/developeranaz/gofile-to-cloudflare-index/refs/heads/main/.images/1747059739966.png" type="image/png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -410,7 +410,7 @@ async function handleRequest(event) {
             `, {
                 status: 401,
                 headers: {
-                    "WWW-Authenticate": 'Basic realm="Sundarans Private Files"',
+                    "WWW-Authenticate": 'Basic realm="GoFile Index"',
                     "Content-Type": "text/html"
                 }
             });
@@ -427,7 +427,7 @@ async function handleRequest(event) {
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Sundarans Private Files - Error</title>
+    <title>GoFile Index - Error</title>
     <link rel="icon" href="https://raw.githubusercontent.com/developeranaz/gofile-to-cloudflare-index/refs/heads/main/.images/1747059739966.png" type="image/png">
     <style>
         @font-face {
@@ -556,7 +556,7 @@ async function handleRequest(event) {
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>$ Sundarans Private Files - ${folderId}</title>
+    <title>$ GoFile Index - ${folderId}</title>
     <link rel="icon" href="https://raw.githubusercontent.com/developeranaz/gofile-to-cloudflare-index/refs/heads/main/.images/1747059739966.png" type="image/png">
     <style>
         @font-face {
@@ -951,7 +951,7 @@ async function handleRequest(event) {
 </head>
 <body>
     <div class="container">
-        <h2>SUNDARANS PRIVATE FILES<span class="cursor"></span></h2>
+        <h2>GoFile Index<span class="cursor"></span></h2>
         
         <div class="terminal-line">$ Initializing file system...</div>
         <div class="terminal-line">$ Connected to folder: ${folderId}</div>
