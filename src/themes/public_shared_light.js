@@ -3,7 +3,7 @@ const AUTH_TOKEN = "Bearer THEGOFILETOKEN"; // Replace with your API Key
 const ROOT_FOLDER_ID = "THEROOTFOLDERID"; // Replace your custom or root folder ID here
 
 async function fetchFileList(folderId) {
-    const response = await fetch(`${GOFILE_API_BASE}${folderId}?wt=4fd6sg89d7s6&contentFilter=&page=1&pageSize=1000&sortField=createTime&sortDirection=-1`, {
+    const response = await fetch(`${GOFILE_API_BASE}${folderId}?wt=7114b5bf6b766dbbde4f4319947f7bb41ca17a90005d7850890a203fd0be494f&contentFilter=&page=1&pageSize=1000&sortField=createTime&sortDirection=-1`, {
         headers: { "authorization": AUTH_TOKEN }
     });
     return response.json();

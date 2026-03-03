@@ -30,7 +30,7 @@ async function fetchFileList(folderId) {
         const response = await fetch(`${GOFILE_API_BASE}${folderId}?contentFilter=&page=1&pageSize=1000&sortField=createTime&sortDirection=-1`, {
             headers: {
                 "Authorization": AUTH_TOKEN,
-                "x-website-token": "4fd6sg89d7s6",
+                "x-website-token": "7114b5bf6b766dbbde4f4319947f7bb41ca17a90005d7850890a203fd0be494f",
                 "Accept": "application/json"
             }
         });
@@ -65,7 +65,7 @@ async function makeFolderPrivate(folderId) {
                 "User-Agent": "Mozilla/5.0",
                 "Content-Type": "application/json",
                 "Authorization": AUTH_TOKEN,
-                "x-website-token": "4fd6sg89d7s6"
+                "x-website-token": "7114b5bf6b766dbbde4f4319947f7bb41ca17a90005d7850890a203fd0be494f"
             },
             body: JSON.stringify({ "attribute": "public", "attributeValue": false })
         });
