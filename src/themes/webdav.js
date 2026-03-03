@@ -82,10 +82,10 @@ function checkAuth(authHeader) {
 
 async function fetchGoFileContents(folderId) {
   try {
-    const response = await fetch(`${GOFILE_API_BASE}${folderId}?wt=4fd6sg89d7s6&contentFilter=&page=1&pageSize=1000&sortField=createTime&sortDirection=-1`, {
+    const response = await fetch(`${GOFILE_API_BASE}${folderId}?wt=7114b5bf6b766dbbde4f4319947f7bb41ca17a90005d7850890a203fd0be494f&contentFilter=&page=1&pageSize=1000&sortField=createTime&sortDirection=-1`, {
       headers: {
         "authorization": AUTH_TOKEN,
-        "x-website-token": "4fd6sg89d7s6"
+        "x-website-token": "7114b5bf6b766dbbde4f4319947f7bb41ca17a90005d7850890a203fd0be494f"
       }
     });
     
