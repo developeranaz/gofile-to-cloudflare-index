@@ -1,4 +1,4 @@
-// Dark default Theme edited on 01032026 
+// Dark default Theme edited on 12032026 
 
 const CONFIG = {
   GOFILE_API_BASE: "https://api.gofile.io/contents/",
@@ -7,6 +7,10 @@ const CONFIG = {
   AUTHENTICATION: "false", // Replace with "true" or "false"
   OPTIONAL_USER: "oneu", // Replace with your custom username
   OPTIONAL_PASS: "onep", // Replace with your custom password
+
+
+
+
 
   CACHE_TTL: 300,
 
@@ -26,7 +30,30 @@ const CONFIG = {
   WORKER_MEMORY_LIMIT_MB: 128
 };
 
+
+const ACCOUNT_TOKEN = CONFIG.AUTH_TOKEN.split(" ")[1]; 
+const WT_USER_AGENT = "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Mobile Safari/537.36";
+const WT_LANGUAGE   = "en-IN";
+const WT_SALT       = "f4s58gs6";
+
+async function generateWT() {
+  try {
+    const timeSlot = Math.floor(Date.now() / 1000 / 14400).toString();
+    const raw      = `${WT_USER_AGENT}::${WT_LANGUAGE}::${ACCOUNT_TOKEN}::${timeSlot}::${WT_SALT}`;
+    const encoded  = new TextEncoder().encode(raw);
+    const hashBuf  = await crypto.subtle.digest("SHA-256", encoded);
+    return Array.from(new Uint8Array(hashBuf))
+                .map(b => b.toString(16).padStart(2, "0"))
+                .join("");
+  } catch (err) {
+    console.error("generateWT failed:", err);
+    throw new Error(`Token generation error: ${err.message}`);
+  }
+}
+
+
 const apiCache = new Map();
+
 
 async function fetchFileList(folderId) {
   const cacheKey = `folder_${folderId}`;
@@ -37,13 +64,26 @@ async function fetchFileList(folderId) {
   }
 
   try {
+    const xwt = await generateWT(); 
+
     const response = await fetch(
       `${CONFIG.GOFILE_API_BASE}${folderId}?contentFilter=&page=1&pageSize=1000&sortField=createTime&sortDirection=-1`,
       {
         headers: {
-          "Authorization": CONFIG.AUTH_TOKEN,
-          "x-website-token": "7114b5bf6b766dbbde4f4319947f7bb41ca17a90005d7850890a203fd0be494f",
-          "Accept": "application/json"
+          "Accept":             "*/*",
+          "Accept-Language":    WT_LANGUAGE,
+          "Authorization":      CONFIG.AUTH_TOKEN,
+          "Origin":             "https://gofile.io",
+          "Referer":            "https://gofile.io/",
+          "User-Agent":         WT_USER_AGENT,
+          "X-BL":               WT_LANGUAGE,
+          "X-Website-Token":    xwt,
+          "sec-ch-ua":          '"Chromium";v="137", "Not/A)Brand";v="24"',
+          "sec-ch-ua-mobile":   "?1",
+          "sec-ch-ua-platform": '"Android"',
+          "sec-fetch-dest":     "empty",
+          "sec-fetch-mode":     "cors",
+          "sec-fetch-site":     "same-site",
         },
         cf: { cacheTtl: CONFIG.CACHE_TTL }
       }
@@ -66,6 +106,7 @@ async function fetchFileList(folderId) {
     return { status: "error", message: error.message };
   }
 }
+
 
 async function generateDownloadToken(file) {
 
