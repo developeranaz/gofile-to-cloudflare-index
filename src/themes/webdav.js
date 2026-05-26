@@ -1,4 +1,4 @@
-// This is only for simple webdav
+// This is only for simple webdav 
 // large uploads are impossible (>1mb,  may be small files may upload working on it)
 // Considr this a s a beta one , thhis will fails
 const GOFILE_API_BASE = "https://api.gofile.io/contents/";

@@ -21,10 +21,10 @@ const CONFIG = {
   WORKER_MEMORY_LIMIT_MB: 128
 };
 
-// ─── X‑Website‑Token constants ─────────────────────────────────────────────
+// ─── X‑Website‑Token constants ───────────────────────────────────────────── 
 const WT_USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36";
 const WT_LANGUAGE   = "en-US";
-const WT_SALT       = "5d4f7g8sd45fsd";
+const WT_SALT       = "g4f8fd9f12h14g";
 const ACCOUNT_TOKEN = CONFIG.AUTH_TOKEN.split(" ")[1];
 
 // ─── HTML Template – NO CSS, only raw HTML ─────────────────────────────────

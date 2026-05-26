@@ -97,7 +97,7 @@ const rootPageHtml = `
     </script>
 </body>
 </html>
-`;
+`; 
 
 async function handleRequest(event) {
     const url = new URL(event.request.url);

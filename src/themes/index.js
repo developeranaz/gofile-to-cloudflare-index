@@ -7,7 +7,7 @@ const OPTIONAL_USER = "oneu"; // Replace with your custom username
 const OPTIONAL_PASS = "onep"; // Replace with your custom password
 // THIS IS A BETA VERSION OF CODE AND MAY CONTAIN ERROR IN NEW FEATURES
 // Gofile File Manager - Clean Version
-// Updated: January 2026
+// Updated: January 2026 
 
 
 

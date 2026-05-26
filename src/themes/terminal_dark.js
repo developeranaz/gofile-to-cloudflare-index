@@ -1,4 +1,4 @@
-// Dark Terminal Theme edited on 28012026 
+// Dark Terminal Theme edited on 28012026  
 const GOFILE_API_BASE = "https://api.gofile.io/contents/";
 const AUTH_TOKEN = "Bearer THEGOFILETOKEN"; // Replace with your API Key
 const ROOT_FOLDER_ID = "THEROOTFOLDERID"; // Replace your custom or root folder ID here
