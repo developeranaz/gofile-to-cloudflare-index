@@ -24,7 +24,7 @@ const CONFIG = {
 
 const WT_USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36";
 const WT_LANGUAGE   = "en-US";   
-const WT_SALT       = "g4f8fd9f12h14g";
+const WT_SALT       = "9844d94d963d30";
 
 const ACCOUNT_TOKEN = CONFIG.AUTH_TOKEN.split(" ")[1];
 
