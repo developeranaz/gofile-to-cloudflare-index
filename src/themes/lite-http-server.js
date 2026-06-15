@@ -1,4 +1,4 @@
-=// GoFile Cloudflare Worker - Simple HTTP Index Theme
+// GoFile Cloudflare Worker - Simple HTTP Index Theme
 
 const CONFIG = {
   GOFILE_API_BASE: "https://api.gofile.io/contents/",
