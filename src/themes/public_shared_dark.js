@@ -24,7 +24,7 @@ const CONFIG = {
 
 const WT_USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36";
 const WT_LANGUAGE   = "en-US";   
-const WT_SALT       = "9844d94d963d30";
+const WT_SALT       = "12af056dacea0b";
 
 const ACCOUNT_TOKEN = CONFIG.AUTH_TOKEN.split(" ")[1];
 
@@ -57,7 +57,7 @@ async function fetchFileList(folderId) {
     const xwt = await generateWT();
 
     const response = await fetch(
-      `${CONFIG.GOFILE_API_BASE}${folderId}?contentFilter=&page=1&pageSize=1000&sortField=createTime&sortDirection=-1`,
+      `${CONFIG.GOFILE_API_BASE}${folderId}?page=1&pageSize=100&sortField=createTime&sortDirection=-1`,
       {
         headers: {
           "Accept":             "*/*",
