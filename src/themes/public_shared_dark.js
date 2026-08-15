@@ -57,7 +57,7 @@ async function fetchFileList(folderId) {
     const xwt = await generateWT();
 
     const response = await fetch(
-      `${CONFIG.GOFILE_API_BASE}${folderId}?page=1&pageSize=100&sortField=createTime&sortDirection=-1`,
+      `${CONFIG.GOFILE_API_BASE}${folderId}?page=1&pageSize=1000&sortField=createTime&sortDirection=-1`,
       {
         headers: {
           "Accept":             "*/*",
